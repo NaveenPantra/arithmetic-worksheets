@@ -1,0 +1,77 @@
+.sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem 0;
+  justify-content: center;
+  line-height: 1;
+}
+
+.heading {
+  /*margin-left: auto;*/
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1;
+}
+
+
+.pageNo {
+  font-weight: 400;
+  margin-left: auto;
+}
+
+.section {
+  flex: 1;
+  display: grid;
+  row-gap: 1rem;
+  column-gap: 2rem;
+  grid-auto-flow: row;
+  box-sizing: border-box;
+  padding: 0 3rem 3rem 3rem;
+  grid-template-rows: repeat(var(--grid-col, 9), 1fr);
+  grid-template-columns: repeat(var(--grid-row, 4), 1fr)
+}
+
+.expression {
+  height: fit-content;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr) 4rem;
+  grid-template-columns: 3rem repeat(2,1fr);
+}
+
+.operand {
+  line-height: 1;
+  font-size: 2.5rem;
+  text-align: right;
+  font-weight: 600;
+  align-self: center;
+  grid-column: 2 / -1;
+  padding-right: 2px;
+}
+
+.operand[data-op-type="1"] {
+  grid-row: 1 / span 1;
+}
+
+.operand[data-op-type="2"] {
+}
+
+.operator {
+  font-size: 3rem;
+  grid-row: 1 / -2;
+  align-self: center;
+  justify-self: center;
+}
+
+.answer {
+  margin-top: 5px;
+  grid-row: -2 / -1;
+  grid-column: 1 / -1;
+  border: 2px solid;
+}

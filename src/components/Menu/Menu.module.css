@@ -1,0 +1,76 @@
+.menu {
+  inset: 0;
+  z-index: 1;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  pointer-events: none;
+  background-color: black;
+  clip-path: circle(6px at calc(100% - 27.5px) calc(0% + 32.5px));
+  transition: clip-path 0.3s ease-in-out;
+}
+
+.menu[data-open="true"] {
+  overflow: scroll;
+  pointer-events: auto;
+  clip-path: circle(150vmax at calc(100% - 27.5px) calc(0% + 32.5px));
+}
+
+body:has(.menu[data-open="true"]) {
+  overflow: hidden;
+}
+
+.mainHeading {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  padding-right: 1rem;
+  line-height: 2;
+}
+
+.operatorsConfigWrapper {
+  margin: 5rem auto;
+  max-width: 1400px;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.operatorConfig {
+  width: 45%;
+
+}
+
+.operatorHeading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.table {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  border-spacing: .5rem;
+}
+
+.table tr {
+
+}
+
+.table input {
+  width: 70%;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.tr {
+  border-bottom: 1px solid white;
+}
+
+

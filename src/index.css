@@ -1,0 +1,66 @@
+:root {
+  --bck-white: #fff;
+  --txt-clr: black;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  color: var(--txt-clr);
+  box-sizing: border-box;
+  background-color: var(--bck-white);
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, ul, li, button, a, section {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  font-weight: 400;
+  font-family: inherit;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+main {
+  padding-bottom: 50vh;
+}
+
+article {
+  border: 1px solid;
+  display: block;
+  margin: 0 auto 0.5cm;
+}
+
+article[data-size="A4"] {
+  width: 21cm;
+  height: 29.7cm;
+}
+
+@page {
+  margin: 0;
+}
+
+@media print {
+  body {
+    visibility: hidden;
+  }
+
+  #print-media {
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  page {
+
+  }
+}
